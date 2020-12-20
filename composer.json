@@ -1,0 +1,58 @@
+{
+    "name": "makise-co/grpc-server",
+    "description": "Makise-Co GRPC server",
+    "keywords": [
+        "micro",
+        "framework",
+        "makise",
+        "coroutine",
+        "swoole",
+        "grpc",
+        "server"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry K.",
+            "email": "coder1994@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "suggest": {
+        "ext-protobuf": "Most performant way to work with protocol buffers",
+        "google/protobuf": "Less performant way to work with protocol buffers"
+    },
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-swoole": "^4.4",
+        "amphp/http": "^1.6",
+        "makise-co/framework": "~2.0.0",
+        "psr/event-dispatcher": "^1.0",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "google/protobuf": "^3.14",
+        "phpstan/phpstan": "^0.12.18",
+        "phpstan/phpstan-phpunit": "^0.12.6",
+        "phpunit/phpunit": "^9.0",
+        "swoole/ide-helper": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MakiseCo\\Grpc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MakiseCo\\Grpc\\Tests\\": "tests/",
+            "Example\\Api\\": "example/gen/example/Api/",
+            "GPBMetadata\\Example\\": "example/gen/GPBMetadata/Example/"
+        }
+    }
+}

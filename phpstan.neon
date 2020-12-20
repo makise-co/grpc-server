@@ -1,0 +1,13 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+
+    checkMissingIterableValueType: false
+    treatPhpDocTypesAsCertain: false
+    excludes_analyse:
+        - tests/ProcessManager.php
+
+includes:
+    - vendor/phpstan/phpstan-phpunit/extension.neon

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "example;api";
+option php_namespace = "Example\\Api";
+
+service Users {
+    rpc Get(GetUserRequest) returns (User);
+    rpc List(ListUserRequest) returns (stream User);
+}
+
+message GetUserRequest {
+    int64 id = 1;
+}
+
+message ListUserRequest {}
+
+message User {
+    int64 id = 1;
+    string email = 2;
+    string name = 3;
+    double rating = 4;
+}
